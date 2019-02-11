@@ -1,0 +1,82 @@
+<!--个人中心-->
+<!--1. 头像 身份 昵称-->
+<view class="myhome">
+    <image src="/img/images/voctor.jpg" mode="aspectFill" lazy-load class="vo-img"/>
+    <view class="m-vip">
+        <image src="/img/images/vip1.png" mode="aspectFill" lazy-load class="vip-img"/>
+        <text>普通用户</text>
+    </view>
+    <text class="m-nickname">实习僧</text>
+</view>
+<!--2.我的钱包 积分-->
+<view class="m-money">
+    <!--钱包-->
+    <view class="m-qb">
+        <image src="/img/images/money.png" mode="aspectFill" lazy-load class="m-img"/>
+        <text class="mt-2">我的钱包</text>
+    </view>
+    <!--积分-->
+    <view class="m-qb">
+        <text class="m-jf">0</text>
+        <view class="m-integral mt-2">
+            <image src="/img/images/jfen.png" mode="aspectFill" lazy-load class="j-img"/>
+            <text>积分</text>
+        </view>
+    </view>
+</view>
+<!--3.我的订单-->
+<view class="myorder">
+    <!--订单导航-->
+    <view class="m-order">
+        <text>我的订单</text>
+    </view>
+    <!--代付款....-->
+    <view class="m-orderDetails">
+        <view class="mm" wx:for="{{myorder}}" wx:key="" id="{{index}}" bindtap="myorder">
+            <image src="{{item.scr}}" mode="aspectFill" lazy-load/>
+            <text class="mt-1">{{item.title}}</text>
+        </view>
+    </view>
+</view>
+<!--4.我的-->
+<view class="my-container">
+    <!--1.我的预约-->
+    <view class="my-modal" wx:for="{{mymodal}}" wx:key="" id="{{index}}" bindtap="mClick">
+        <view class="s-modal">
+            <image src="{{item.src}}" mode="aspectFill" lazy-load/>
+            <text class="ml-2">{{item.title}}</text>    
+        </view>
+        <image src="/img/tab/more.png" mode="aspectFill" lazy-load class="js-img"/>
+    </view>
+    <!--2.成为分销商-->
+    <!--3.我的卡券-->
+    <!--4.领券中心-->
+    <!--5.我的收藏-->
+    <!--6.在线客服-->
+</view>
+
+
+<!-- 领取优惠券 -->
+<view class='lj-mask' catchtouchmove='preventTouchMove' wx:if="{{linjuan}}"></view>
+<view class='lj-show shoViewAnimation' animation="{{animationData}}" wx:if="{{linjuan}}">
+  <view class='lj-title'>领取优惠劵</view>
+  <!-- 优惠劵 -->
+  <view class='cardContainer'>
+    <view class='card'>
+      <!-- 优惠券金额 -->
+      <view class='card-Price' bindtap='getAcoupon'> 
+        <text class='Zindex text-weight'>￥20.00</text>
+        <text class='Zindex font-12'>立即领取</text>
+        <image src='/img/images/goods_coupon_recive.png' mode='aspectFill' lazy-load class='c-img'/>
+      </view>
+  
+      <!-- 优惠券信息 -->
+      <view class='card-Detail'>
+        <text>20.00元优惠券，满50.00可用</text>
+        <text class='btn-gray font-12'>2018-01-25至2018-05-18</text>
+      </view>
+    </view>
+  </view>
+  <!-- 完成 -->
+  <button class='wc-btn' bindtap='noSelectCard'>完成</button>
+</view>

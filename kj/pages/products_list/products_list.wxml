@@ -1,0 +1,18 @@
+<!--商品列表-->
+<!--导航-->
+<view class="pro_nav">
+    <text wx:for="{{nav}}" wx:key="" id="{{index}}" bindtap="active" class="{{item.active?'active':'noactive'}}">{{item.name}}</text>
+    <!-- <image src="/img/images/j_price.png" class="pro_image"/> -->
+</view>
+<!--产品-->
+<view class="pro_parent" wx:if="{{mask}}">
+    <view class="pro_list" wx:for="{{pro}}" wx:key="{{index}}" id="{{index}}" bindtap="detail">
+        <image src="{{item.src}}" class="list_image"/>
+        <text class="pro_detail">{{item.detail}}</text>
+        <view class="pro_price">
+            <text>￥{{item.price}}</text>
+            <text>已售{{item.num}}件</text>
+        </view>
+    </view>
+</view>
+

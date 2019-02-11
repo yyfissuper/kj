@@ -1,0 +1,54 @@
+  <!--商城页-->
+<!--轮播-->
+<view class="slider">
+  <swiper autoplay circular interval="3000" indicator-dots indicator-active-color="rgba(0,0,0,.8)">
+    <swiper-item wx:for="{{banner}}" wx:key="index">
+      <navigator class="swiper_banner">
+        <image src="{{item.src}}" mode="aspectFill" height="172" width="345"/>
+      </navigator>
+    </swiper-item>
+  </swiper>
+</view>
+<!--搜索框-->
+<view class="shop_parent" bindtap="search">
+  <view class="shop_text">
+      <icon type="search" size="15" />
+      <text class="shop_icon">搜索</text>
+  </view>
+  <input class="shop_input" disabled/>
+</view>
+
+<!--商品-->
+<view class="products" wx:for="{{class_pro}}" wx:key="{{index}}" data-id="{{index}}">
+  <!--上部分 更多-->
+  <view class="more">
+    <view class="more_shop">
+      <image src="/img/tab/wrie.png" style="width: 50rpx;height: 50rpx"/>
+      <text class="mr-1 ml-1">{{item.name}}</text>
+      <image src="/img/tab/wrie.png" style="width: 50rpx;height: 50rpx"/>
+    </view>
+    <!--更多-->
+    <view class="anymore" bindtap="products_list" id="{{index}}">
+        <text>更多</text>
+        <image src="/img/tab/more.png"/>
+      </view>
+  </view>
+  <!--下部分 商品-->
+  <view class="pro_parent">
+    <view class="pro_list" wx:for="{{item.pro_list}}" wx:key=""  data-src="{{item.src}}" data-detail="{{item.detail}}" data-price="{{item.price}}" data-sale="{{item.sale}}" data-oldprice="{{item.oldprice}}" data-spec="{{item.spec}}" data-num="{{item.num}}" data-stock="{{item.stock}}" bindtap="detail">
+      <!--商品-->
+        <image src="{{item.src}}" class="pro_image"/>
+        <text class="pro_detail mt-1">{{item.detail}}</text>
+        <view class="pro_price">
+            <text>￥{{item.price}}</text>
+          <text>已售{{item.sale}}件</text>
+        </view>
+    </view>
+  </view>
+</view>
+
+<!--客服  电话-->
+<view class="service">
+  <image src="/img/images/phone.png" mode="aspectFill" lazy-load bindtap="phone"/>
+  <image src="/img/images/service.png" mode="aspectFill" lazy-load/>
+</view>

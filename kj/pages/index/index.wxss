@@ -1,0 +1,121 @@
+page{background-color: #eee}
+
+/*轮播*/
+.slider,.slider image,.slider swiper{
+  width: 100%;
+  height: 360rpx;
+}
+/*搜索框*/
+.shop_parent{
+  padding: 20rpx 30rpx;
+  position: relative;
+}
+.shop_input{
+  border: 1rpx solid #ddd;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.shop_text{
+  font-size: 12px;
+  text-align: center;
+  display: inline-flex;
+  position: absolute;
+  top:29rpx;left: 44%;
+}
+.shop_text .shop_icon{margin-left: 10rpx}
+
+.products{
+  margin-bottom: 15rpx;
+}
+.products .more{
+  display: flex;
+  padding: 25rpx 10rpx;
+  width: 100%;
+  position: relative;
+  line-height: 40rpx;
+  color: #B3B3B3;
+  border-bottom: 2rpx solid #ddd;
+  background-color:#fff; 
+}
+.more_shop{
+  display: flex;
+  font-size:12px;
+  margin: 0 auto;
+  background-color:#fff; 
+}
+.more_shop>text{
+  margin-top: 5rpx;
+}
+.anymore{
+  font-size: 12px;
+  display: flex ;
+  position: absolute;
+  top: 28rpx;right: 30rpx;
+}
+.anymore>image{width: 40rpx;height: 40rpx;}
+/*商品列表*/
+.pro_parent{
+  display: flex;
+  flex-wrap: wrap;
+  background-color:#fff; 
+}
+.pro_list{
+  width: 48%;
+  height: 400rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50rpx;
+  padding: 0 10rpx;
+  flex-wrap: wrap;
+  margin-right: 15rpx;
+}
+
+.pro_list image{
+  width: 100%;
+  height: 240rpx;
+  box-sizing: border-box;
+}
+.pro_detail{
+  width: 100%;
+  height: 70rpx;
+  display: -webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;  
+  text-overflow: ellipsis;
+  font-size: 12px;
+  overflow: hidden;
+  margin-top: 20rpx;
+}
+.pro_price{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10rpx;
+  align-items: center;
+  margin-top: 20rpx;  
+}
+.pro_price text:nth-child(1){
+  font-size: 12px;
+  color: #ff0000;
+}
+.pro_price text:nth-child(2){
+  font-size: 10px;
+  color: #B3B3B3;
+}
+/*客服  电话*/
+.service{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  bottom: 4%;
+  right: 3%;
+  z-index: 1;
+}
+.service image{
+  width: 70rpx;
+  height: 70rpx;
+}
+.service image:nth-child(2){margin-top: 30rpx}

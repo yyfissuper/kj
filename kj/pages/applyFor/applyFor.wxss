@@ -1,0 +1,24 @@
+/* 申请成为分销商*/
+.g-img{width: 100%;height: 344rpx;}
+.applyFor{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40rpx 0;
+    font-size: 12px;
+    color: #555;
+}
+.applyFor>image{width: 60rpx;height:60rpx;margin: 40rpx 0;}
+.fxs-Btn{
+    width: 90%;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #FF2222;
+    margin-top: 40rpx;
+    height: 2rem;
+}
+.fxs-Btn::after{border: none}
+
+

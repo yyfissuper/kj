@@ -1,0 +1,5 @@
+<!--订单列表-->
+<view class="l-orderlist" wx:if="{{showView}}">
+    <view wx:for="{{list}}" class="l-list {{ item.active ? 'active': 'btn-gray'}}" wx:key="" id="{{index}}" bindtap="active">{{item.name}}</view>
+</view>
+<text class="font-14 btn-gray noOrder {{order?'o-show':'o-hide'}}">暂无相关订单</text>

@@ -1,0 +1,9 @@
+<!--选择收货地址-->
+<view class="s_address">
+    <text>暂无收货地址</text>
+</view>
+<view class="s_Allbtn">
+    <navigator class="s_btn bg-danger" bindtap="editAddress">手动添加地址</navigator>
+    <navigator class="s_btn bg-green">一键获取地址</navigator>
+</view>
+

@@ -1,0 +1,82 @@
+/**app.wxss**/
+page{background-color: #eee}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.ml-1{margin-left:10rpx ;}
+.ml-2{margin-left:20rpx ;}
+.ml-4{margin-left:40rpx ;}
+.mr-1{margin-right: 10rpx}
+.mt-1{margin-top: 10rpx}
+.mt-2{margin-top: 20rpx}
+.mt-4{margin-top:40rpx}
+/*字体大小*/
+.font-10{font-size: 10px}
+.font-12{font-size: 12px}
+.font-14{font-size: 14px}
+/*字体颜色*/
+.btn-red{color:#ff0000}
+.btn-gray{color:#555;}
+.btn-warn{color:#ff6633}
+/*背景*/
+.bg-danger{background-color:#ff0000}
+.bg-green{background-color:#06A525}
+.bg-gray{background-color:#555;}
+.bg-warn{background-color:#ff6633}
+.bg-blue{background-color: #08ACD6;}
+/*图片大小*/
+.img{width: 60rpx;height: 50rpx;}
+.center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*按钮*/
+.box{
+  display: flex;
+  align-items: center;
+  border: 1rpx solid #ddd;
+  width:135rpx;
+  height: 36rpx;
+  border-radius: 60rpx;
+  position: relative;
+  overflow: hidden;
+}
+.box>image:first-child{position: absolute;left: 4rpx;}
+.box>text{
+  position:absolute;
+  left:39rpx;
+  top:2rpx;
+  width:57rpx;
+  height:40rpx;
+  text-align:center;
+}
+.box>image:last-child{position: absolute;right: 4rpx;}
+view.box image{width: 32rpx;height: 32rpx;}
+
+/*数量按钮*/
+.tui-number-group{
+    display: table;
+    table-layout: fixed;
+    width: 250rpx;
+    text-align: center;
+    border-radius: 6rpx;
+    overflow: hidden;
+    border:1px solid #bbb;
+}
+.tui-number-cell{
+    display: table-cell;
+    line-height: 1.3;
+    border-radius: 0;
+}
+button::after{
+    border-bottom:none;
+    border-top:none;
+    border-radius: 0;
+}

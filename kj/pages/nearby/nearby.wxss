@@ -1,0 +1,53 @@
+/* 附近 */
+.n_container{
+    position: relative;
+    margin: 20rpx auto;
+    display: flex;
+    align-items: center;
+    width: 95%;
+    box-sizing: border-box;
+    height: 70rpx;
+}
+.n_input{width: 80%;height: 100%; background-color: #fff;padding: 0 15rpx  }
+.n_search{
+    font-size: 12px;
+    background-color: #aaa;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 20%;
+    flex-wrap: nowrap;
+}
+.n_pla{
+    padding-left: 15rpx;
+    font-size: 12px;    
+}
+.n_show{opacity: 1;}
+.n_hide{opacity: 0;}
+
+
+.navigation{
+    display: flex;
+    padding: 20rpx 15rpx;
+    background-color:#fff;
+    width: 100%;
+    box-sizing: border-box; 
+    justify-content: space-between;
+    align-items: center;
+}
+.n_details{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+}
+.n_details>text{font-size: 12px;color: #555}
+.n_navigation{
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    color: #555;
+    align-items: center;
+}
+.daohang{width: 50rpx;height: 50rpx}

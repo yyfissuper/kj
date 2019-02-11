@@ -1,0 +1,27 @@
+/* 选择收货地址*/
+.s_address{
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    padding: 25rpx 0;
+}
+.s_Allbtn{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20rpx;
+    margin: 30rpx 0;
+}
+.s_btn{
+    padding: 15rpx 0rpx;
+    color: #fff;
+    border-radius: 5rpx;
+    text-align: center;
+    font-size: 14px;
+    width: 45%;
+}
+
+

@@ -1,0 +1,25 @@
+/* 订单列表 */
+.l-orderlist{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    width: 100%;
+}
+.l-list{
+    padding: 25rpx 0;
+    font-size: 12px;
+}
+.active{
+    color:#ff0000;
+    border-bottom: 2rpx solid #ff0000;
+    font-weight: bold;
+}
+.noOrder{
+    position: fixed;
+    top:25%;
+    left:38%;
+}
+
+.o-show{display: block}
+.o-hide{display: none}

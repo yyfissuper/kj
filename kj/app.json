@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/search/search",
+    "pages/cart/cart",
+    "pages/pro_details/pro_details",
+    "pages/myhome/myhome",
+    "pages/myPocket/myPocket",
+    "pages/card/card",
+    "pages/applyFor/applyFor",
+    "pages/myorder/myorder",
+    "pages/logs/logs",
+    "pages/sel-address/sel-address",
+    "pages/pay/pay",
+    "pages/class/class",
+    "pages/nearby/nearby",
+    "pages/products_list/products_list",
+    "pages/editAddress/editAddress",
+    "pages/shopDetails/shopDetails",
+    "pages/likes/likes",
+    "pages/orderPay/orderPay"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "康佳商城",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#FF6262",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "商城",
+        "iconPath": "/img/tab/shop.png",
+        "selectedIconPath": "/img/tab/shop-active.png"
+      },
+      {
+        "pagePath": "pages/class/class",
+        "text": "分类",
+        "iconPath": "/img/tab/fl.png",
+        "selectedIconPath": "/img/tab/fl-active.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "/img/tab/cart.png",
+        "selectedIconPath": "/img/tab/cart-active.png"
+      },
+      {
+        "pagePath": "pages/myhome/myhome",
+        "text": "我的",
+        "iconPath": "/img/tab/my.png",
+        "selectedIconPath": "/img/tab/my-active.png"
+      },
+      {
+        "pagePath": "pages/nearby/nearby",
+        "text": "附近门店",
+        "iconPath": "/img/tab/nearby.png"
+      }
+    ]
+  }
+}

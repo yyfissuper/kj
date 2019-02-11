@@ -1,0 +1,165 @@
+/*结算 */
+.m_address{
+    padding: 40rpx 15rpx;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1rpx solid #aaa;
+    border-bottom: 3rpx solid #ddd;  
+    align-items: center;
+    background-color: #fff;
+}
+.m_img{width:33rpx;height:28rpx;}
+.m_pay{
+    padding: 25rpx 15rpx;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20rpx 0;
+    font-size: 12px;    
+}
+.onlinePay{
+    display: flex;
+    align-items: center;
+}
+.m_platform{
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.pla-pro{
+    padding: 25rpx 15rpx;
+    font-size: 12px;
+}
+.m_pro{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 25rpx 15rpx;
+    align-items: center;
+    border-top: 1rpx solid #ddd;
+}
+.m_pro>image{
+    width:40%;
+    height:3rem;
+}
+.mp_details{
+    margin-left: 20rpx;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+.mp_details>text:first-child{
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;  
+    overflow: hidden;
+    margin-top:10rpx;
+}
+.mp_price{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+}
+.m_freight{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #555555;
+    padding: 25rpx 15rpx;
+    margin:20rpx 0;
+    background-color: #fff;
+}
+
+.m_message{
+    display: flex;
+    padding: 25rpx 15rpx;
+    background-color: #fff;
+    font-size: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+}
+.m_message .m_input{
+    width: 80%;
+    margin-left: 20rpx;
+}
+.m_totle{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0%;
+    z-index: 1;
+}
+.m_totle>text{width: 60%;padding:0 15rpx }
+.m_totle .m_btn{
+    padding: 40rpx 0rpx;
+    width: 40%;
+    background-color:#ff0000;
+    color: #fff;
+    text-align: center; 
+    font-size: 14px;
+}
+.hide{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    z-index: 9000;
+    opacity: 0.7;
+    transition-duration: 2s;
+ }
+    
+.sho{
+    width:85%;
+    height:200rpx;
+    position:fixed;
+    top:37%;
+    left:7%;
+    z-index:9999;
+    background-color:#fff;
+    flex-direction:column;
+    align-items:center;
+    border-radius:5px;    
+}
+.sho_pay{
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1rpx solid #ddd;
+    padding: 20rpx 15rpx;
+    display: flex;
+    font-size: 12px;
+    text-align: center;
+}
+.sho_pay>text{width: 100%;}
+.online{
+    display: flex;
+    padding: 20rpx 15rpx;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    margin-top: 20rpx;
+}
+.pay{
+    display: flex;
+    width: 95%;
+    align-items: center;
+    font-size: 12px;
+    color: red;
+}
+.P_img{
+    width:46rpx;
+    height:46rpx;
+}
+

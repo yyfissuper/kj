@@ -1,0 +1,22 @@
+<!-- 支付金额 -->
+<view class='payPrice'>
+  <text>支付金额</text>
+  <text>￥{{totle}}</text>
+</view>
+
+<!-- 微信支付 支付宝支付 -->
+<view class='wxPay'>
+    <view class='payContainer' wx:for="{{payment}}" wx:key="" id="{{index}}">
+      <view class='pay'>
+        <image src='{{item.src}}' mode='aspectFill' lazy-load class='globleImg'></image>
+        <text class='ml-2'>{{item.payment}}</text>
+      </view>
+      <icon type='success' size='25' data-id='{{index}}' wx:if="{{item.selected}}" bindtap='selected'></icon>
+      <icon type='success' color='#aaa' wx:else size='25' data-id="{{index}}" bindtap='selected'></icon>  
+    </view>
+    
+</view>
+
+<!-- 按钮 -->
+<button class='o-Btn' bindtap='closeBtn' data-statu="open">确认支付</button>
+

@@ -1,0 +1,49 @@
+<!--购物车-->
+<!--平台自营-->
+<view class="p_tai">
+    <icon wx:if="{{selected}}" color="orange" type="success" data-index="{{index}}" bindtap="selected"></icon>
+    <icon wx:else type="circle" data-index="{{index}}" bindtap="selected"></icon>
+    <text class="ml-1">平台自营</text>
+</view>
+<!--商品-->
+<!-- 有商品 -->
+<block wx:if="{{hasList}}">
+<view class="p_pro" wx:for="{{carts}}" wx:key="" id="{{index}}">
+  <icon wx:if="{{item.selected}}" color="orange" type="success" data-index="{{index}}" bindtap="selectList"></icon>
+  <icon wx:else type="circle" data-index="{{index}}" bindtap="selectList"></icon>
+  <image src="{{item.src}}" mode="aspectFill" lazy-load class="p_img"/>
+  <!--详情-->
+  <view class="p_details mt-1">
+      <text class="p_ds">{{item.detail}}</text>
+      <text class="font-10 mt-1">规格:{{spec}}</text>
+      <!--按钮-->
+      <view class="p_btn">
+          <text class="btn-red">￥<text>{{item.price}}</text></text>
+          <view class="tui-number-group">
+              <button class="tui-number-cell" data-index="{{index}}" bindtap="delCount">-</button>
+              <input type="number" value="{{item.num}}" class="tui-number-cell" />
+              <button class="tui-number-cell" data-index="{{index}}" bindtap="addCount">+</button>
+          </view>
+      </view>
+  </view>
+</view>
+</block>
+<!-- 没有商品 -->
+<block wx:else>
+<view class='goCart' hidden='{{Nmask}}'>
+  <image src="/img/images/goShop.png" mode="aspectFill" lazy-load/>
+  <text>购物车空空如也,去逛逛吧</text>
+</view>
+</block>
+<view class='shop-footer'></view>
+<!--结算-->
+<view class="p_totle">
+    <view class="p_sel">
+        <icon wx:if="{{selected}}" color="orange" type="success" data-index="{{index}}" bindtap="selected"></icon>
+        <icon wx:else type="circle" data-index="{{index}}" bindtap="selected"></icon>
+        <text class="ml-1">全选</text>
+        <text class="ml-4 btn-red">总价:￥<text>{{totle}}</text></text>
+    </view>
+    <navigator class="btn bg-blue" bindtap="redact">{{edit}}</navigator>
+    <navigator class="btn bg-danger"  bindtap="pay">结算</navigator>
+</view>

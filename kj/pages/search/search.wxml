@@ -1,0 +1,41 @@
+<!--搜索-->
+<view class="search">
+    <!--搜索框-->
+    <view class="search-wrap">
+        <view class="icon-search" bindtap='default'>
+            <text>{{text}}</text>
+            <image src="/img/images/jiantou.png" mode="aspectFill" lazy-load/>
+        </view>
+        <input type="text" placeholder="请输入搜索内容" class="search-input" name="searchKeyword" bindinput="bindKeywordInput" value="{{searchKeyword}}" placeholderStyle="font-size:10px"/>
+    </view>
+    <!--取消-->
+    <text class="search-cancle" bindtap='search'>取消</text>
+</view>
+
+<!--搜索到的商品-->
+<view class='p-container' wx:if="{{hasList}}">
+  <view class='p-pro' wx:for="{{proData}}" wx:key="" id="{{index}}" bindtap='proDetail'>
+  <image src="{{item.src}}" mode="aspectFill" lazy-load class='p-img'/>
+  <text class='mt-2 p-details'>{{item.detail}}</text>
+  <text class='btn-red mt-1' style='text-align:center'>￥{{item.price}}</text>
+  </view>
+</view>
+<!-- 没有商品 -->
+<view wx:if="{{noHasList}}" class='p-box'>
+  <image src="/img/images/box.png" mode="aspectFill" lazy-load style='width:120rpx;height:120rpx'></image>
+  <text class='ml-2 font-12 btn-gary'>抱歉,没有相关商品</text>
+</view>
+
+<!--历史记录  删除-->
+<view class="history {{showView?'p-show':'p-hide'}}">
+    <view class="his_jl">
+        <text class="ml-1">历史记录</text>
+        <image src="/img/images/pass.png" lazy-load class="mr-1"/>
+    </view>
+    <view class="his_bs">我是采集</view>
+</view>
+
+<!--分类-->
+<view class="classify {{click ? 'show' : 'hide'}}">
+    <view wx:for="{{s_class}}"  class="{{item.active?'active':'noactive'}}" wx:key="" id="{{index}}" bindtap="searchClass">{{item.name}}</view>
+</view>

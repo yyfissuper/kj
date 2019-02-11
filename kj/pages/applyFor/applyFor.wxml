@@ -1,0 +1,7 @@
+<!--申请成为分销商-->
+<image src="http://bpic.588ku.com//back_origin_min_pic/18/06/09/2c37343c3689e8cc52ef40fab69d4d4d.jpg" mode='aspectFill' lazy-load class='g-img'></image>
+<view class="applyFor">
+    <image src="/img/images/she.png" mode="aspectFill" lazy-load/>
+    <text>谢谢您的支持,请等待审核!</text>
+    <button class="fxs-Btn" bindtap="index">去商场逛逛</button>
+</view>

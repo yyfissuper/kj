@@ -1,0 +1,7 @@
+<!--我的卡券-->
+<view class='m-card'>
+  <view class="{{active?'active':'btn-gary'}}" bindtap="active">未使用</view>
+  <view class="{{actived?'active':'btn-gary'}}"bindtap="active">已失效</view>
+</view>
+
+<text class='fix'>暂无卡券</text>

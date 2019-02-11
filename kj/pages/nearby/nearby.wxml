@@ -1,0 +1,27 @@
+<!--附近-->
+<!--搜索框-->
+<view class="n_container" bindtap="n_input" >
+    <input placeholder="请输出关键字" class="n_input" placeholder-class="n_pla" focus/>
+    <view class="n_search {{active?'n_show':'n_hide'}}">
+        <icon type="search" size="15" color="gray" style="margin-left: 15rpx"/>
+        <text class="ml-1">搜索</text>
+    </view>
+</view>
+
+
+<!--一键导航-->
+<view class="navigation" bindtap="shopDetails">
+    <view class="n_details" >
+        <text style="font-size: 14px;color: #000">康佳智能电器</text>
+        <text class="mt-2">评分:<text class="btn-red ml-1">❤❤❤❤❤❤</text></text>
+        <text class="mt-2">电话:<text class="ml-1">1232312321312</text></text>
+        <text class="mt-2">距离:<text class="ml-1">289.123km</text></text>
+    </view>
+    <view class="n_navigation" bindtap="map">
+        <image src="/img/tab/navigation.png" mode="aspectFill" lazy-load class="daohang"/>
+        <text class="mt-2">一键导航</text>
+    </view>
+</view>
+
+
+

@@ -1,0 +1,38 @@
+<!--店铺详情-->
+<!--轮播-->
+<view class="slider">
+    <swiper circular interval="3000" indicator-dots indicator-active-color="#000">
+        <swiper-item wx:for="{{banner}}" wx:key="">
+            <navigator class="swiper_banner">
+                <image src="{{item.name}}" mode="aspectFill" height="172" width="345"/>
+            </navigator>
+        </swiper-item>
+    </swiper>
+</view>
+<!--店铺-->
+<view class="shop-details">
+    <!--1.康佳智能电器 评分 营业时间-->
+    <view class="d-name">
+        <text>康佳智能电器</text>
+        <text class="mt-2 font-12 btn-gray">评分:<text class="btn-red ml-1">❤❤❤❤❤❤</text></text>
+        <text class="mt-2 font-12 btn-gray">营业时间:<text class="ml-1">9:00-20:00</text></text>
+    </view>
+    <!--2.电话 15685562152-->
+    <view class="d-pho" bindtap="phone">
+        <text class="d-text">电话:<text class="ml-1">15685562152</text></text>
+        <image src="/img/images/pho.png" mode="aspectFill" lazy-load class="p_img"/>
+    </view>
+    <!--3.地址：贵州省安顺市西秀区-->
+    <view class="d-pho" bindtap="map">
+        <view class="d-text add">贵州省安顺市西秀区</view>
+        <image src="/img/tab/navigation.png" mode="aspectFill" lazy-load class="p_img"/>
+    </view>
+</view>
+<!--店铺介绍-->
+<view class="s-recommand">
+    <view class="s-mind">店铺介绍</view>
+    <view class="s-details">主要经营厨房家用电器,认准大品牌,康佳竭诚为您服务每一天。</view>
+</view>
+
+
+    

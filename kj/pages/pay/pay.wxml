@@ -1,0 +1,64 @@
+<!--结算-->
+<!--选择收货地址-->
+<view class="m_address" bindtap="selAddress">
+    <text class="font-12 btn-red">{{selectAddress}}</text>
+    <image src="/img/tab/more.png" mode="aspectFill" lazy-load class="m_img"/>
+</view>
+<!--线上支付-->
+<view class="m_pay" bindtap="hasmore">
+    <text>支付方式</text>
+    <view class="onlinePay">
+        <text>线上支付</text>
+        <image src="/img/tab/more.png" mode="aspectFill" lazy-load class="m_img"/>
+    </view>
+</view>
+<!--平台自营-->
+<view class="m_platform">
+    <!--1.平台自营 上-->
+    <view class="pla-pro">平台自营</view>
+    <!--2.商品详情-->           
+    <view class="m_pro" wx:for="{{carts}}" wx:key="" id="{{index}}"> 
+        <image src="{{item.src}}" mode="aspectFill" lazy-load/>
+        <view class="mp_details">
+            <text>{{item.detail}}</text>
+            <text class="font-10 btn-gray">规格：{{item.spec}}</text>
+            <view class="mp_price">
+                <text class="font-10 btn-gray">x{{item.num}}</text>
+                <text class="font-12 btn-red">￥：<text>{{item.price}}</text></text>
+            </view>
+        </view>
+    </view>
+</view>
+<!--运费 freight-->
+<view class="m_freight">
+    <text>运费</text>
+    <text>请先选择收货地址</text>
+</view>
+<!--买家留言-->
+<view class="m_message">
+    <text>买家留言</text>
+    <input class="m_input" placeholder="请填写备注"/>
+</view>
+<!--总计-->
+<view class="m_totle">
+    <text class="font-14 btn-red">总计:<text class="ml-1">￥{{totle}}</text></text>
+    <navigator class="m_btn" bindtap='submitBtn'>提交</navigator>
+</view>
+
+<!--弹出框-->
+<view class="hide" catchtouchmove="preventTouchMove" wx:if="{{showView}}"></view>
+<view class="sho" wx:if="{{showView}}">
+    <!--一层 支付方式-->
+    <view class="sho_pay">
+        <text>支付方式</text>
+        <image src="/img/images/close.png" mode="aspectFill" lazy-laod class="m_img" bindtap="close"/>
+    </view>
+    <!--线上支付-->
+    <view class="online">
+        <view class="pay">
+            <image src="/img/images/onlinePay.png" mode="aspectFill" lazy-load class="P_img"/>
+            <text class="ml-2">线上支付</text>
+        </view>
+        <icon type="success" size="20" color="red" bindtap="close"/>
+    </view>
+</view>

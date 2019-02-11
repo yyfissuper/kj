@@ -1,0 +1,30 @@
+<!--分类-->
+<!--顶部 搜索 及 导航-->
+<view class="class_parent">
+    <!--搜索框-->
+    <view class="shop_parent" bindtap="search">
+        <view class="shop_text">
+            <icon type="search" size="15" />
+            <text class="shop_icon">搜索</text>
+        </view>
+        <input class="shop_input" disabled/>
+    </view>
+    <!--导航-->
+    <view class="scroll">
+        <navigator wx:for="{{nav}}" class="nav {{item.select?'red-btn':'gray-btn'}}"  wx:key="{{index}}" id="{{index}}" bindtap="activeBtn">{{item.name}}</navigator>
+    </view>
+</view>
+<!--商品-->
+<view class="class_products" wx:if="{{mask}}">
+    <view class="class_list" wx:for="{{proList}}" wx:key="" id="{{index}}" bindtap="pro_details">
+        <image src="{{item.src}}" mode="aspectFill" lazy-load class="classImg" />
+        <text class="class_details">{{item.detail}}</text>
+        <view class="pro_price ">
+            <text class="btn-red">￥<text class="ml-1">{{item.price}}</text></text>
+            <text class="btn-gray">已售{{item.stock}}件</text>
+        </view>
+    </view>
+</view>
+
+
+

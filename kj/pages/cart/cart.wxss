@@ -1,0 +1,100 @@
+/* 购物车 */
+.p_tai{
+    width: 100%;
+    padding: 20rpx 15rpx;
+    border: 1rpx solid #ddd;
+    font-size: 12px;
+    color: #555;
+    display: flex;
+    background: #fff;
+    align-items: center;
+}
+
+.p_pro{
+    display: flex;
+    padding: 30rpx 15rpx;
+    background: #fff;   
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1rpx solid #ddd;
+}
+.p_img{
+    margin-left: 20rpx;
+    width:26%;
+    height:93rpx;
+}
+.p_details{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    color: #555;
+    width: 60%;
+    box-sizing: border-box;
+    margin-left: 29rpx;
+}
+.p_ds{
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.p_btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*二个按钮*/
+.addCart{
+    background-color: #fc0;
+    font-size: 14px;
+}
+.addOrder{
+    background-color:#fc6;
+    font-size: 14px;
+}
+/*结算*/
+.p_totle{
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    font-size: 12px;
+    position: fixed;
+    bottom: 0;
+    align-items: center;
+    box-sizing: border-box;
+}
+.p_sel{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    padding-left: 10rpx;
+}
+.btn{
+    padding: 35rpx 0rpx;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    width: 20%
+}
+
+
+.goCart{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  color: #555;
+  position:absolute;
+  top:33%;
+  left:28%;
+}
+.goCart>image{
+  width: 150rpx;
+  height: 150rpx;
+}
+.shop-footer{
+  height: 150rpx;
+}
+

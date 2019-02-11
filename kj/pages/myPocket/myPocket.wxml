@@ -1,0 +1,24 @@
+<!--我的收藏-->
+<view class='myPocket'>
+  <!-- <view wx:for="{{pocket}}" class='m-pocket {{item.active ? "active":"btn-gray"}}' wx:key="" id="{{index}}" bindtap="active">{{item.name}}</view> -->
+  <view class='m-pocket {{selected ? "active":"btn-gray"}}' bindtap="active">商品</view>
+  <view class='m-pocket {{active ? "active":"btn-gray"}}' bindtap="active">专题</view>
+</view>
+
+
+<view class='{{selected?"p-show":"p-hide"}}'>
+  <view class='p-container'>
+    <view class='p-pro' wx:for="{{pro}}" wx:key="" id="{{index}}">
+    <image src="{{item.pic}}" mode="aspectFill" lazy-load class='p-img'/>
+    <text class='mt-2 p-details'>{{item.detail}}</text>
+    <text class='btn-red mt-1' style='text-align:center'>￥{{item.price}}</text>
+    </view>
+  </view>
+</view>
+
+<text class='pp {{active? "p-show":"p-hide"}}'>暂无收藏的专题</text>
+
+
+
+
+
